@@ -3,7 +3,7 @@
 ## Preview
 http://18.218.2.44:8000/
 
-Fun project to book a fictive missle launch to a far away planet.
+Fun project to book a fictive missile launch to a far away planet.
 
 ## Usage
 - [Deno](https://deno.land) server.
