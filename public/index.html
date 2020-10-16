@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Control Center</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/reset.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+
+<body>
+  <article class="main-content">
+    <header class="site-header">
+        <h1 class="title-global">
+          <a href="/">NASA Mission Control</a>
+          <div>
+            <span class="title-event-wrap">:N:O:</span><a href="https://deno.land" target="_blank">D:E:N:O</a><span class="title-event-wrap">:</span>
+          </div>
+        </h1>
+        <nav class="main-nav">
+          <ul>
+            <li><a onclick="navigate('launch')">[New Mission]</a></li>
+            <li><a onclick="navigate('upcoming')">[Upcoming]</a></li>
+            <li><a onclick="navigate('history')">[History]</a></li>
+          </ul>
+        </nav>
+      <div>
+      </div>
+    </header>
+
+    <main>
+      <article id="launch">
+        <section class="page-content">
+          <p>Schedule a mission launch for interstellar travel to one of the Kepler Exoplanets!</p>
+          <p>Each of the destination Exoplanets is a confirmed planet orbiting stars and matching the following criteria:</p>
+            <ul>
+              <li>0.78 M☉ ≤ Solar Mass ≤ 1.04 M☉</li>
+              <li>0.99 R☉ ≤ Solar Radius ≤ 1.01 R☉</li>
+              <li>0.50 R⊕ ≤ Planetary Radius ≤ 1.50 R⊕</li>
+            </ul>
+          </p>
+          <p>Which according to NASA match conditions on earth and can support life as we know it</p>
+        </section>
+        <form>
+          <div class="form-item">
+            <label>Launch Date</label>
+            <input type="date" id="launch-day" max="2030-12-31" />
+          </div>
+          <div class="form-item">
+            <label>Mission Name</label>
+            <input type="text" id="mission-name" />
+          </div>
+          <div class="form-item">
+            <label>Rocket Type</label>
+            <input type="text" id="rocket-name" value="TomKi Experimental" disabled />
+          </div>
+          <div class="form-item">
+            <label>Destination Exoplanet</label>
+            <select id="planets-selector"></select>
+          </div>
+          <a class="submit" onclick="submitLaunch()">[Save Mission ✔]</a>
+        </form>
+
+        <p id="launch-success" hidden>Congratulations! Interstellar launch is scheduled.</p>
+      </article>
+
+      <article id="upcoming" hidden>
+        <section class="page-content">
+          <p>Upcoming missions including both SpaceX and TomKi rockets.</p>
+          <p>Warning! Clicking on the <span class="delete">✖</span> aborts the mission.</p>
+        </section>
+        <div class="launch-list" id="upcoming-list"></div>
+      </article>
+
+      <article id="history" hidden>
+        <section class="page-content">
+          <p>History of tracked mission launches. Includes SpaceX launches starting from the year 2006.</p>
+        </section>
+        <div class="launch-list"  id="history-list"></div>
+      </article>
+    </main>
+  </article>
+
+  <footer class="site-footer">
+    <p>This is not an official site and is not affiliated with NASA or SpaceX in any way.</p>
+    <p>For fun purposes only.</p>
+    <p>Made with <span>♥</span> by <a href="https://github.com/TomKiWorld" target="_blank" rel="noopener noreferrer">TomKiWorld</a></p>
+  </footer>
+  <video class="spacevideo" autoplay muted loop playback playsinline>
+    <source src="media/space.mp4" type="video/mp4">
+  </video>
+  <script src="javascripts/script.js"></script>
+</body>
+</html>

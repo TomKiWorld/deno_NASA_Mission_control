@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Space+Mono&display=swap');
+
+body {
+  background: #001440;
+  color: #d6d6d6;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+a {
+  text-decoration: none;
+  color: #0088cc;
+}
+
+a:hover, 
+a:focus {
+  color: #a0c1e6;
+  cursor: pointer;
+}
+
+.main-content {
+  position: relative;
+  width: 90%;
+  min-height: 103vh;
+  margin: 0 auto;
+  line-height: 1.2rem;
+  font-size: 0.8rem;
+}
+
+/* Header */
+.site-header {
+  white-space: nowrap;
+  cursor: default;
+  z-index: 100;
+  margin: 1rem 0;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+.title-global {
+  font-size: 1rem;
+  font-weight: normal;
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-global a {
+  color: #0090e6;
+  text-shadow: 0 0 0.1rem #0090e6, 0 0 0.3rem #0090e6;
+}
+
+.title-global a:hover,
+.title-global a:focus {
+  color: #97c0ef;
+  text-shadow: 0 0 0.1rem #97c0ef, 0 0 0.3rem #97c0ef;
+}
+
+.title-event-wrap {
+  display: inline-block;
+  text-decoration: none;
+  color: #0090e6;
+  text-shadow: 0 0 0.1rem #0090e6, 0 0 0.3rem #0090e6;
+  opacity: 0.33;
+  white-space: pre;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-nav li {
+  display: inline-block;
+  padding: 0.6rem;
+  font-size: 1rem;
+}
+
+.main-nav a {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+}
+
+/* Pages */
+.page-content {
+  margin-bottom: 1rem;
+}
+
+.page-content ul {
+  margin: 1rem 0;
+}
+
+/* Form */
+.form-item {
+  padding: 0.1rem 0;
+  max-width: 35rem;
+}
+
+.form-item input[type="text"], 
+.form-item textarea, 
+.form-item select, 
+.form-item input[type="date"] {
+  background: transparent;
+  color: inherit;
+  border: 0.05rem solid #666666;
+  background: #17182b;
+  padding: 0 0.1rem;
+  font-family: inherit;
+  font-size: inherit;
+  width: 15rem;
+  margin: 0;
+}
+
+.form-item label {
+  display: block;
+  width: 15rem;
+  margin: 1rem 0;
+}
+
+.submit {
+  font-weight: bold;
+  display: block;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+}
+
+*::-moz-focus-inner {
+  padding: 0;
+  border: 0
+}
+
+/* List Items */
+.launch-list {
+  font-size: 0.8rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-height: 70vh;
+}
+
+.list-container {
+  position: relative;
+  overflow: scroll;
+  width: 100%;
+}
+
+.list-heading {
+  background: #001440;
+  white-space: pre;
+  overflow: visible;
+  width: 56rem;
+  padding: 0 0 0.3rem 0;
+  position: sticky;
+  display: inline-block;
+  height: 2rem;
+  top: 0;
+  z-index: 2;
+}
+
+.list-body {
+  height: auto;
+  width: 56rem;
+}
+
+.list-item {
+  width: 100%;
+  min-width: 35rem;
+  max-width: 60rem;
+  min-height: 1.35rem;
+  white-space: pre;
+}
+
+.list-item:hover, 
+.list-item:active {
+  background-color: #1e1e46;
+}
+
+.list-number {
+  width: 4rem;
+}
+
+.list-date {
+  width: 10rem;
+}
+
+.list-mission {
+  width: 16rem;
+}
+
+.list-rocket {
+  width: 13rem;
+}
+
+.list-destination,
+.list-customers {
+  width: 10rem;
+}
+
+.list-item .delete {
+  cursor: pointer;
+  padding-right: 0.5rem;
+}
+
+.list-heading-item,
+.list-body-item {
+  display: inline-block;
+}
+
+.silver {
+  color: #99b3cc;
+}
+
+.gold {
+  color: #ffb366;
+}
+
+.failure {
+  color: #ff0000;
+  padding-right: 0.5rem;
+}
+
+.success {
+  color: greenyellow;
+  padding-right: 0.5rem;
+}
+
+.delete {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+/* 404 Page */
+.lost-page .page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  line-height: 2.3rem;
+  text-align: center;
+}
+
+.lost-page .page-title {
+  font-size: 2rem;
+}
+
+.lost-page .lost-missle {
+  width: 10rem;
+  height: 10rem;
+  margin: 1rem 0;
+}
+
+.lost-page .return-link {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Site Footer */
+.site-footer {
+  position: absolute;
+  text-align: center;
+  bottom: 2rem;
+  width: 90%;
+  left: 5%;
+  height: 4rem;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  opacity: 0.6;
+}
+
+.spacevideo {
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: 0.25;
+}
+
+@media screen and (min-width: 48rem) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-content {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+
+  .form-item label {
+    display: inline-block;
+  }
+
+  .launch-list {
+    font-size: 1rem;
+  }
+}
